@@ -1,0 +1,212 @@
+{
+    "info": {
+        "_postman_id": "a8c9d3f4-5678-9012-3456-def789012345",
+        "name": "Modul 5 - Beauty Clinic API",
+        "description": "Collection untuk testing Beauty Clinic Treatment API - Modul 5 Pemrograman Web",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Treatments",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/treatments?limit=10&page=1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "treatments"
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "10",
+                            "description": "Items per page"
+                        },
+                        {
+                            "key": "page",
+                            "value": "1",
+                            "description": "Page number"
+                        },
+                        {
+                            "key": "search",
+                            "value": "facial",
+                            "description": "Search in name & description",
+                            "disabled": true
+                        },
+                        {
+                            "key": "category",
+                            "value": "facial",
+                            "description": "Filter by category",
+                            "disabled": true
+                        },
+                        {
+                            "key": "status",
+                            "value": "active",
+                            "description": "Filter by status",
+                            "disabled": true
+                        },
+                        {
+                            "key": "min_price",
+                            "value": "100000",
+                            "description": "Minimum price",
+                            "disabled": true
+                        },
+                        {
+                            "key": "max_price",
+                            "value": "500000",
+                            "description": "Maximum price",
+                            "disabled": true
+                        },
+                        {
+                            "key": "orderBy",
+                            "value": "price",
+                            "description": "Sort field",
+                            "disabled": true
+                        },
+                        {
+                            "key": "sortBy",
+                            "value": "asc",
+                            "description": "Sort direction (asc/desc)",
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Treatment by ID",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/treatments/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "treatments",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Treatment",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Facial Premium Anti-Aging\",\n    \"description\": \"Perawatan wajah premium dengan teknologi terkini untuk mengatasi tanda-tanda penuaan\",\n    \"category\": \"facial\",\n    \"price\": 350000,\n    \"duration\": 90,\n    \"status\": \"active\",\n    \"popularity\": 5\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/treatments",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "treatments"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Treatment",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"price\": 375000,\n    \"popularity\": 5\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/treatments/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "treatments",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Treatment",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/treatments/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "treatments",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000",
+            "type": "string"
+        }
+    ]
+}
