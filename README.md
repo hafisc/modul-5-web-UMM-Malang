@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
@@ -344,7 +344,6 @@ This project is created for educational purposes as part of **Modul 5 Pemrograma
 
 <div align="center">
 
-### 🌟 Made with ❤️ and ☕ for Learning
 
 **Happy Coding! 🚀**
 
@@ -354,6 +353,5 @@ This project is created for educational purposes as part of **Modul 5 Pemrograma
 
 ---
 
-*Let's build amazing things together!* ✨
 
 </div>
