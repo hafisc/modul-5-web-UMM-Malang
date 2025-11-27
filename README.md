@@ -293,37 +293,6 @@ By completing this module, you've mastered:
 
 ---
 
-## 📊 Grading Criteria
-
-| Component | Weight | Status |
-|-----------|--------|--------|
-| 🧪 Codelab | 15% | ✅ Complete |
-| 💾 Database Implementation | 10% | ✅ Complete |
-| 🌐 API Endpoints | 25% | ✅ Complete |
-| 📮 Postman Collection | 15% | ✅ Complete |
-| 🎯 Understanding & Demo | 35% | ⏳ Your Turn! |
-
-**Total Completed**: 65% ✅  
-**Remaining**: 35% (Demo & Q&A)
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| ![Laravel](https://img.shields.io/badge/-Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) | 11.x | Backend Framework |
-| ![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=php&logoColor=white) | 8.2+ | Programming Language |
-| ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) | 8.0 | Database |
-| ![Composer](https://img.shields.io/badge/-Composer-885630?style=flat-square&logo=composer&logoColor=white) | 2.x | Dependency Manager |
-| ![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat-square&logo=postman&logoColor=white) | Latest | API Testing |
-
-</div>
-
----
-
 ## 🤝 Contributing
 
 Improvements and feedback are always welcome! Feel free to:
