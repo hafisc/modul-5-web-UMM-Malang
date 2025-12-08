@@ -56,7 +56,13 @@ class TreatmentController extends Controller
             'duration' => 'required|integer|min:1',
             'status' => 'required|in:active,inactive',
             'popularity' => 'nullable|integer|min:1|max:5',
+            'image' => 'nullable|image|max:5120', // Validation for image < 5MB
         ]);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images', 'public');
+            $data['image'] = $path;
+        }
 
         $treatment = Treatment::create($data);
         return response()->json($treatment, 201);
@@ -77,7 +83,17 @@ class TreatmentController extends Controller
             'duration' => 'sometimes|required|integer|min:1',
             'status' => 'sometimes|required|in:active,inactive',
             'popularity' => 'sometimes|nullable|integer|min:1|max:5',
+            'image' => 'sometimes|nullable|image|max:5120', // Validation for image < 5MB
         ]);
+
+        if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($treatment->image) {
+               \Illuminate\Support\Facades\Storage::disk('public')->delete($treatment->image);
+            }
+            $path = $request->file('image')->store('images', 'public');
+            $data['image'] = $path;
+        }
 
         $treatment->update($data);
         return response()->json($treatment);

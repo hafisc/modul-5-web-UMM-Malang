@@ -10,7 +10,7 @@ class Treatment extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name', 'description', 'category', 'price', 'duration', 'status', 'popularity'
+        'name', 'description', 'category', 'price', 'duration', 'status', 'popularity', 'image'
     ];
 
     protected $casts = [
