@@ -33,7 +33,13 @@ class TodoController extends Controller
             'due_date' => 'nullable|date',
             'priority' => 'nullable|integer|min:1|max:3',
             'category' => 'nullable|in:personal,work,study,others',
+            'image' => 'nullable|image|max:2048', // Validation for image
         ]);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images', 'public');
+            $data['image'] = $path;
+        }
 
         $todo = Todo::create($data);
         return response()->json($todo, 201);
@@ -53,7 +59,17 @@ class TodoController extends Controller
             'due_date' => 'sometimes|nullable|date',
             'priority' => 'sometimes|integer|min:1|max:3',
             'category' => 'sometimes|in:personal,work,study,others',
+            'image' => 'sometimes|nullable|image|max:2048', // Validation for image
         ]);
+
+        if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($todo->image) {
+               \Illuminate\Support\Facades\Storage::disk('public')->delete($todo->image);
+            }
+            $path = $request->file('image')->store('images', 'public');
+            $data['image'] = $path;
+        }
 
         $todo->update($data);
         return response()->json($todo);
